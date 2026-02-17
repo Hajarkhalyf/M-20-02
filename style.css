@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffc0cb; /* pink background */
+  font-family: 'Pacifico', cursive;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.typing-text {
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+/* Animated dots */
+.dots {
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Cake Page */
+.cake-page {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.cake {
+  font-size: 3em;
+  margin: 50px 0;
+}
+
+.cake .candles {
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+/* Mini-game floating emojis */
+.floating-emojis {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.floating-emojis .emoji {
+  position: absolute;
+  font-size: 2.5em;
+  cursor: pointer;
+  user-select: none;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
+
+/* Pop-up messages */
+.pop-message {
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff69b4;
+  text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+     -1px  1px 0 #000,
+      1px  1px 0 #000;
+  pointer-events: none;
+  animation: popUp 1s forwards;
+}
+
+@keyframes popUp {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-50px) scale(1.2); }
+}
+
+/* Teddy Bear Page */
+.teddy-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.teddy-page .teddy {
+  font-size: 80px;
+  animation: float 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* Final Message */
+.final-message {
+  font-size: 1.8em;
+  line-height: 1.5em;
+  margin-top: 50px;
+}
+
+.final-message p {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #ffb6c1; /* pink inside */
+  text-shadow:
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+     -1px  1px 0 #000,
+      1px  1px 0 #000; /* black edge */
+  line-height: 1.5em;
+}
